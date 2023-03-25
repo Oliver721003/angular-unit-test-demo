@@ -1,0 +1,13 @@
+<h2>{{ title }}</h2>
+<div>
+  <label>單價:</label><span>{{ unitPrice }}</span>
+  <input type="text" name="quantity" #quantity="ngModel" ngModel />
+  <label>總價:</label><span>{{ total }}</span>
+</div>
+
+<button mat-stroked-button color="primary" (click)="onCompute(+quantity.value)">
+  Compute
+</button>
+<button mat-stroked-button color="primary" (click)="onCompute(+quantity.value)">
+  Reset
+</button>
